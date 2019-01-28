@@ -1,0 +1,3 @@
+This Project :
+- classifies random points using the sigmoid function, estimating the error with Cross Entropy 
+- iteratively finds the best line using Gradient Descent weighted with a learning rate alpha
