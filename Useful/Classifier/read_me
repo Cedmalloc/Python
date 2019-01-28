@@ -1,3 +1,5 @@
 This Project :
 - classifies random points using the sigmoid function, estimating the error with Cross Entropy 
-- iteratively finds the best line using Gradient Descent weighted with a learning rate alpha
+- iteratively finds the best line using Batch Gradient Descent weighted with a learning rate alpha
+- batch Gradient descent limits the number of points we can effectively classify, stochastic needed
+  for larger datasets
