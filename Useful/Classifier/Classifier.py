@@ -16,7 +16,7 @@ def gradient_descent(linear_param, points, y, alpha):
     for i in range(num_iterations): # calcula
         p = sigmoid(points*linear_param)
         gradient = points.T * (p-y)* (alpha/points.shape[0])
-        # calculate gradient
+        # calculate batch gradient (problematic for larger number of points)
 #alpha is the learning rate, small error to ensure the steps aren't too big
         linear_param = linear_param - gradient
     #substracting gradient from [w1,w2,b]
