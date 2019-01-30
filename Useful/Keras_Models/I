@@ -1,3 +1,6 @@
 Implementation of Classification Algorithm using Keras
 
-- This time the Keras library allows us to implement the Classifier much easier with 
+- This time the Keras library allows us to implement the Classifier much easier with the help of the Sequential, Dense and Adam function
+- increase amount of epochs to gain a higher accuracy score (model.fit...)
+- plots loss and accuracy 
+- Can predict the probability of a point being in a certain area
