@@ -65,8 +65,8 @@ def plot_decision_boundary(X,Y,model):
     plt.contourf(xx,yy,z)
 
 plot_decision_boundary(X, y, model)
-plt.scatter(X[:num,0],X[:num,1])
-plt.scatter(X[num:,0],X[num:,1])
+
+plt.scatter(X[:,0],X[:,1])
 x = 0.5
 y = 0.5
 point = np.array([[x,y]])
