@@ -1,0 +1,37 @@
+CNN
+
+What I learned
+  -CNN arguably most popular Deep Learning Architecture
+  -CNNs make use of spacial data, unlike others
+  -3 Layer types : Convultional, Pooling, fully connected Layer
+  -MNIST Dataset only worked with solid Accuracy and processing time due to the small size of the images (28x28), 
+   otherwise it wouldn't be computationaly possible
+  -Pooling layers reduce the amount of parameters, increasing efficiency
+  -Convultion: Learn certain image features
+  -Kernel Matrix moves in strides (1 Stride = moving one column further every iteration)
+  -the bigger the stride, the smaller the corresponding feature map 
+  -multiply every color value with kernel value and add to receive a sum,then divide by num of fields to receive average 
+  => store value in the new and smaller feature map, repeat until the end of the end
+
+  -Kernel = feature detector 
+  -every Kernel is designed to have a destinct set of weights, changed 
+  -weight sharing allows to create filters that can be used in different parts of th image
+  -in the beginning (first layers) edges, shapes are detected and as we go deeper more high level info is filtered 
+  => images might become unrecognizable in deeper layers as they start to build on top of each other
+  
+  -Fully connected layer is responsible for classification 
+  -updating weights and biases with backpropagation using gradient descent
+  -the more filters, the more features can be detected
+  -combining all feature maps creates convolution
+  -with RGB pictures 3x3 Kernel would become a 3x3x3 Kernel
+
+  -Relu : Matrix multiplication and addition is linear, Relu introduces linearity
+  -Sigmoid and tanh are easier affected by vanishing gradient (multiplying more and more small numbers with each other)
+  -Relu : Multiplying by gradient of one doesn't lead to vanishing gradient
+  -Filters preserve old image, after all the Feature maps have been created, Relu is passed over the images
+  => Relu converts all negative values to 0
+  -max pooling: outputs maximum values in the given area (exmple 2x2), reduces computational complexity
+  -scales images down while still preserving features, helps reduce overfitting
+  -if max pooling is too large, map is scaled down too much
+
+  
