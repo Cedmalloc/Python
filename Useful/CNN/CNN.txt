@@ -34,4 +34,4 @@ What I learned
   -scales images down while still preserving features, helps reduce overfitting
   -if max pooling is too large, map is scaled down too much
 
-  
+  the points mentioned above will be studied in practice by implementing a CNN to classify the MNIST Dataset, afterwards we can compare how   much more efficiently and accurately a CNN can classify images be compared to a normal NN
