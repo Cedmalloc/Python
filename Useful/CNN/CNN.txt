@@ -34,4 +34,16 @@ What I learned
   -scales images down while still preserving features, helps reduce overfitting
   -if max pooling is too large, map is scaled down too much
 
-  the points mentioned above will be studied in practice by implementing a CNN to classify the MNIST Dataset, afterwards we can compare how   much more efficiently and accurately a CNN can classify images be compared to a normal NN
+  the points mentioned above will be studied in practice by implementing a CNN to classify the MNIST Dataset, afterwards we can compare   how   much more efficiently and accurately a CNN can classify images be compared to a normal NN
+  
+    drop out layer:
+  - randomly setting fraction of input nodes to 0 => nodes are turned off
+  - everytime it updates paramters, radnom set of nodes is turned off (different set every time)
+  - helps reduce overfitting, as it forces the network to use various combination of nodes to classify data
+  - NN becomes more versatile allows weights to be better distriputed
+  - only used during training process, in testing drop out is turned off
+  => in testing nodes can combine all their independent learning 
+  - redundancy is created, as following Neuron "listens" to different input Neurons
+  - 0.5 is the recommended value by the researchers (50%)
+  - implemented in between fully connected layers (larger number of parameters)
+  
