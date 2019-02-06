@@ -47,3 +47,8 @@ What I learned
   - 0.5 is the recommended value by the researchers (50%)
   - implemented in between fully connected layers (larger number of parameters)
   
+  Paramter Sharing in CNNS:
+  -Reduces amount of parameters drastically
+  -Same weights and biases used in each depth slice(= 2D slice for example[55x55x96]
+  -every neuron will still perfrom gradient descent for it's weights, but these will be added up and only change a single set of weights    per slice
+  -Based on the idea that if a ceratin feature is useful at some location in the image, it should intuitively be useful at some other location
