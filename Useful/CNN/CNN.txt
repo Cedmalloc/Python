@@ -52,3 +52,12 @@ What I learned
   -Same weights and biases used in each depth slice(= 2D slice for example[55x55x96]
   -every neuron will still perfrom gradient descent for it's weights, but these will be added up and only change a single set of weights    per slice
   -Based on the idea that if a ceratin feature is useful at some location in the image, it should intuitively be useful at some other location
+  
+  Data Augmentation
+
+- Taking existing images and transforming, altering it 
+- allows model to look at more variety, especially useful with small data sets
+- can be done by rotating, zooming in ,changing color, ...
+- import ImageDataGenerator which allows us to set ranges 
+- model.fit_generator runs image generator in parallel with model training 
+  
