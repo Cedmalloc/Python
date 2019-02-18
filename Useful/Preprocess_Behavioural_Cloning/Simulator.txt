@@ -1,0 +1,18 @@
+Self Driving Car Simulator 
+  - Behavioral Cloning : Model learns from Drivers driving style => Driver's ability important for the outcome  
+  - Drive Car in both directions in order for the model to generalize better (no bias towards left/right turn)
+  - larger Dataset can help avoid overfitting as we already saw (more variation)
+  - Car has 3 cameras that allows us to collect the images, was decided by NVidia
+  => helps generalize 
+  - only steering angle is used (not throttle or brake)
+  - regression based problem
+  - steering angle aranged between -1 and 1 in radian value
+  - upload images to github to then clone them and use them in the notebook
+  - for the drive model yuv color space is recommended by NVidia
+  - yuv takes human perception into account, lower bandwith for chrominance is included 
+  - chrominance : signal used to transmit color information in videos
+  - dead rule : if a node gets a negative value, the output of the relu is 0 
+  => and since the gradient is zero the weight will never be changed (Backpropgation)
+  Solution : Elu function in the negative region the gradient is not zero and the value is negative => replace relu with elu
+  - Augmentation library imgaug used, only 4 operations implemented(flipping, panning, zooming, changing brightness) 
+  
