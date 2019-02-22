@@ -1,0 +1,16 @@
+Tensorflow
+- Tensors : basic chunks of data = arrays of values 
+- 2 Sections : 
+- first :Building nodes
+- second : running model
+
+Build : 
+Build nodes, with more than 0 Tensors
+Decide on a model architecture, input and outputs, parameters
+Split training and testing data
+
+Running : 
+Run session to output results
+Specify Epochs (Under/Overfitting problem)
+1st train then test
+ 
