@@ -1,0 +1,28 @@
+Activation Functions
+
+Step Function (standard step):
+- either 1 or 0 
+- no in between, can cause dead neurons 
+
+Sigmoid:
+- similar to Step approches 1 , approches 0
+- can cause dead neurons still
+
+TanH: 
+- -> -1 for input <0 / -> 1 for input > 0
+- can cause dead neurons still
+
+Relu : 
+- 0 for input <= 0, equal to input for the right interval
+- much better due to positive inputs being kept
+- Problem that all negative values are 0  
+- widely used function
+
+LeakyRelu/ ELU: O approches I, if I < 0, O = I
+- a lot like Relu,but low negative output for I <0
+- Avoids more dead neurons
+- Produces decent result, widely used in combination with relu
+
+Softmax: Set of Probabilites based on number of outputs (Number of classes)
+- Usually used as final output layer
+- great for last layer as it allows us to predict probabilities of object being a member of a certain class
