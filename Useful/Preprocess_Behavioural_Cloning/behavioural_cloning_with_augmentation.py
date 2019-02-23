@@ -201,8 +201,8 @@ def Nvidia_Model():
   #according to end-to-end deep learning for self driving cars, Dropout layers are added to prevent overfitting
   model = Sequential()
   model.add(Convolution2D(24,5,5 , subsample = (2,2), input_shape= (66,200,3),  activation = 'elu'))
-  model.add(Convolution2D(36,5,5 , subsample = (2,2), activation = 'relu'))  
-  model.add(Convolution2D(48,3,3 , subsample = (2,2), activation = 'relu'))  
+  model.add(Convolution2D(36,5,5 , subsample = (2,2), activation = 'elu'))  
+  model.add(Convolution2D(48,3,3 , subsample = (2,2), activation = 'elu'))  
   model.add(Convolution2D(64,3,3 , activation = 'elu'))  #subsample removed as size is already reduced to 5x22
   model.add(Convolution2D(64,3,3 , activation = 'elu')) 
   model.add(Dropout(0.5))
