@@ -19,13 +19,13 @@ labels = ['airplane','automobile','bird','cat','deer','dog','frog',
 'horse','ship','truck']
 
 #hot encode
+#just for flattening
+#def reshape_array(input_array):
+ # output = []
+  #for im_array in input_array:
+   #     output.append(np.ravel(im_array))
 
-def reshape_array(input_array):
-  output = []
-  for im_array in input_array:
-        output.append(np.ravel(im_array))
-
-  return np.asarray(output)
+  #return np.asarray(output)
 
 
 y_train = to_categorical(y_train)
