@@ -167,7 +167,7 @@ def new_model():
   model.add(Conv2D(60,(5,5),input_shape= (32,32,1),activation = 'relu')) #30 5x5 filters applied
   #model.add(Dropout(0.5))
   #num of parameters : (kernel_size*stride+1)*filters
-  model.add(Conv2D(60,(5,5),input_shape= (32,32,1),activation = 'relu'))
+  model.add(Conv2D(60,(5,5),activation = 'relu'))
   #scaled down to 28x28
   model.add(MaxPooling2D(pool_size=(2, 2)))
   model.add(Conv2D(30,(3,3),activation = 'relu'))                  #doubled amount of filters from 30/15 to 60/60/30/30
