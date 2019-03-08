@@ -49,6 +49,35 @@ def CNN():
     model.add(Dense(10, activation = 'softmax'))
     model.compile(SGD(lr = 0.001), loss = 'categorical_crossentropy', metrics = ['accuracy'])
     return model
+   
+   
+   def CNN_V3():
+  model = Sequential()
+  model.add(Conv2D(32,(3,3),input_shape= (32,32,3),activation = 'relu',padding = 'same')) #30 5x5 filters applied
+  #model.add(Dropout(0.5))
+  #num of parameters : (kernel_size*stride+1)*filters
+  model.add(Conv2D(32,(3,3),activation = 'relu',padding = 'same'))
+  #scaled down to 28x28
+  model.add(MaxPooling2D(pool_size=(2, 2)))
+  model.add(Conv2D(100,(3,3),activation = 'relu',padding = 'same'))                  #doubled amount of filters from 30/15 to 60/60/30/30
+  #model.add(Dropout(0.5))
+  model.add(Conv2D(100,(3,3),activation = 'relu',padding = 'same'))
+  model.add(MaxPooling2D(pool_size=(2,2)))
+  model.add(Dropout(0.5))
+  model.add(Flatten()) #flatten to input in fully connected layer
+  model.add(Dense(2500,activation = 'relu'))  
+  model.add(Dropout(0.5))
+  model.add(Dense(1000,activation = 'relu'))  
+  model.add(Dropout(0.5))
+  model.add(Dense(500,activation = 'relu')) 
+  model.add(Dropout(0.5))
+  model.add(Dense(100,activation = 'relu'))  
+  model.add(Dropout(0.5))
+  model.add(Dense(num_classes, activation = 'softmax'))
+  model.compile(Adam(lr=0.001),loss = 'categorical_crossentropy',metrics = ['accuracy'])  #lr reduced from 0.01 by factor 10
+  return model
+   
+   
 model = CNN()
 h = model.fit(x_train, y_train, epochs = 30 , batch_size = 32, shuffle = 1, verbose = 1);
 model.save(filepath = 'Image.classifier.h5')
