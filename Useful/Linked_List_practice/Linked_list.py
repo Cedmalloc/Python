@@ -64,6 +64,17 @@ class LinkedList(object):
         else :
                   self.head = cur.next
                 
+    def reverse(self):
+        cur = self.head
+        prev = None
+        #next = None
+        while cur :
+            next = cur.next
+            cur.next = prev #reverse pointer
+            prev = cur
+            cur = next
+        self.head = prev       
+                
 # Test cases
 # Set up some Elements
 e1 = Element(1)
